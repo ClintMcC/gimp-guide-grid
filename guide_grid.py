@@ -7,7 +7,7 @@ def guide_grid(image, drawable, hspace, vspace, percent, hgutter, vgutter, hmarg
     if delete_guides:
         guides = pdb.gimp_image_find_next_guide(image, 0)
         while guides != 0:
-            pdb.gimp_image_remove_guide(image, guides)
+            pdb.gimp_image_delete_guide(image, guides)
             guides = pdb.gimp_image_find_next_guide(image, 0)
 
     imageHeight = pdb.gimp_image_height(image)
